@@ -20,3 +20,5 @@ router := regexrouter.NewRouter()
 router.HandleAny("^/builds/", subrouter)
 router.HandleAny("^/", http.HandlerFunc(rootHandler))
 ```
+
+You can also use named capture groups and access them through `http.Request.Context()`.
